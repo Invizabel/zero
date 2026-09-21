@@ -10,6 +10,8 @@ void usb_push(uint8_t * data, int delay)
 
     // CDC interface 0
     furi_hal_cdc_send(0, data, sizeof(data));
+
+    // Delay by X miliseconds before continuing, can be any postive 32 bit integer including 0
     furi_delay_ms(delay);
 }
 
